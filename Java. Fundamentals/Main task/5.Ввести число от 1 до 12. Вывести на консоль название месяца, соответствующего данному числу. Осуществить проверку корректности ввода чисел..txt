@@ -1,14 +1,19 @@
 import java.util.Scanner;
-public class Main
-{
+public class New {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        System.out.println(solve(N));
-    }
-    public static String solve(int N){
-        String[] month = {"","January","February","March","April","May","June","July","August","September","October","November","December"};
-        if(N > 0 && N<month.length) return month[N];
-        return "Month not found";
+            Scanner sc = new Scanner(System.in);
+            boolean b = true;
+            int n;
+            while (b) {
+                System.out.print("Введите номер месяца от 1 до 12: ");
+                n = sc.nextInt();
+                String[] month = {"", "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"};
+                if (n > 0 && n < month.length) {
+                    System.out.println(month[n]);
+                    break;
+                } else {
+                    System.out.println("Вы ввели не верные данные");
+                }
+            }
     }
 }
