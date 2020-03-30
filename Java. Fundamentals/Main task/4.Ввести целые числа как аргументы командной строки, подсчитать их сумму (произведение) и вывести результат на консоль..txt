@@ -1,17 +1,19 @@
-       /* //5. Ввести целые числа как аргументы командной строки, подсчитать их суммы (произведения) и вывести результат на консоль.
+import java.util.Scanner;
+
+public class Teset {
+    public static void main(String[] args) {
+        int s, m;
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ввести целые цисла: ");
-        int value = scanner.nextInt();
-        int sum = 0;
-        int com = 1;
-        while (value != 0) {  //подсчитать сумму чисел
-            sum = sum + value % 10;
-            value = value / 10;
+        System.out.print("Ввести целое положительное число: ");
+        int n = scanner.nextInt();
+        s = 0; 
+        m = 1; 
+        while (n > 0) {
+            s += n % 10; // сумма
+            m *= n % 10; // произведение
+            n = n / 10; // проверка каждого числа
         }
-        System.out.println("Cумма введённых чисел: " + sum);
-       *//* while (value != 0) {   //подсчитать произведения чисел
-            com *= value % 10;
-            value = value / 10;
-        }
-        System.out.println("Произведение введённых чисел: " + com);*//*
-*/
+        System.out.println("Сумма: "+s);
+        System.out.print("Произведение: "+ m);
+    }
+}
