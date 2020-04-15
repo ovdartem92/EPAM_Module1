@@ -1,4 +1,5 @@
 public class Hospital {
+
     public static void listOfDiagnosis(Patient[] patients) {
         println("Рак");
         for (Patient patient : patients) {
